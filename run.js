@@ -11,6 +11,10 @@ var loop = function () {
     ctx.fillRect(0, 0, width, height);
 
     for (i in flies) {
+        
+        if (mousePos.sub(flies[i].pos).mod < flies[i].size+30) { 
+            flies[i].drawDetailBox();
+        }
         if (flies[i].love == undefined && attraction_exists) {
             // selecting one fly in array flies
             for (j in flies) {
