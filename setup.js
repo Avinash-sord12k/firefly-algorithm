@@ -22,11 +22,12 @@ wall_collision = false;
 fly_fly_collision = false;  // not working
 attraction_exists = true;
 love_line_color = "#fce303";
-population = 50;
+population = 10;
 dev_mode = false;
 var mousePos = new Vector(0, 0);
 var lastTimeCalled = Date.now();
 var framIndex = 0;
+var fps = 60;
 
 var canvas = document.querySelector("#canvas");
 canvas.width = width;
@@ -38,5 +39,4 @@ canvas.addEventListener("mousemove", function (e) {
     mouseX = e.clientX;
     mouseY = e.clientY;
     mousePos = new Vector(mouseX, mouseY);
-    console.log(mousePos.call);
 });

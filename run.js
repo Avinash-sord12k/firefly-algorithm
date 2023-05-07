@@ -11,8 +11,8 @@ var loop = function () {
     ctx.fillRect(0, 0, width, height);
 
     for (i in flies) {
-        
-        if (mousePos.sub(flies[i].pos).mod < flies[i].size+30) { 
+
+        if (mousePos.sub(flies[i].pos).mod < flies[i].size + 30) {
             flies[i].drawDetailBox();
         }
         if (flies[i].love == undefined && attraction_exists) {
@@ -26,7 +26,6 @@ var loop = function () {
                         let intensity = flies[j].glow / (1 + medium_opacity * distance ** 2);
                         // settin new love
                         if (intensity > flies[i].attraction) {
-                            console.log("new love");
                             flies[i].attraction = intensity;
                             flies[i].target_pos = flies[j].pos;
                             flies[i].love = flies[j];
@@ -41,6 +40,17 @@ var loop = function () {
 
         drawFps();
         framIndex++;
+
+        // if (framIndex % 5 == 0) {
+        //     if (fps < 30) {
+        //         flies.pop();
+        //     } else {
+        //         if (flies.length < population) {
+        //             let fly = new Fly();
+        //             flies.push(fly);
+        //         }
+        //     }
+        // }
     }
 
     requestAnimationFrame(loop);
