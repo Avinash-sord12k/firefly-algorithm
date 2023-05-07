@@ -97,3 +97,15 @@ function Vector(x, y) {
     }
 }
 
+function drawFps() {
+    ctx.beginPath();
+    ctx.shadowColor = "transparent";
+    ctx.font = "20px Arial";
+    ctx.fillStyle = love_line_color;
+    if (framIndex % 100 == 0) {
+        timediff = Date.now() - lastTimeCalled; 
+        fps = Math.round(1000 / timediff);
+    }
+    ctx.fillText(`fps: ${fps}`, 10, 30);
+    lastTimeCalled = Date.now();
+} 

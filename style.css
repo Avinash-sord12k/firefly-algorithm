@@ -30,6 +30,10 @@ div.info {
     padding: 1rem;
     z-index: 1;
     transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    border: 2px solid #cac528;
+    border-radius: 4px;
 }
 .info h2 {
     color: #cac528;
