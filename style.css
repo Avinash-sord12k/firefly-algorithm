@@ -70,3 +70,23 @@ div.info {
     color: #cb0909;
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 768px) {
+    div.info {
+        padding: 0.5rem;
+        width: 80%;
+        height: 80%;
+    }
+    div.info h2 {
+        font-size: 16px;
+    }
+    div.info p {
+        font-size: 0.8rem;
+    }
+    div.info span {
+        font-size: 0.8rem;
+    }
+    div.info .controls button {
+        font-size: 0.8rem;
+    }
+}
