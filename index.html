@@ -6,15 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>firefly</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <canvas id="canvas"></canvas>
+    <div class="info">
+        <div class="controls">
+            <button id="hide" onclick="hideInfo()"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <h2>Firefly Algorithm Visualisation</h2>
+        <p>hello! This visualisation is based on the behaviour of firefly.
+            This algorithm also known as an optimisation algorithm, So the idea is fireflies are asexual and gets
+            attracted by other flies which is more brighter than itself, but the point is brightness aka intensity
+            changes with distance so it gets attracted to most bright according to itself. That's it . Enjoy by changing the values.</p>
+        <span>More information on: </span><a href="https://en.wikipedia.org/wiki/Firefly_algorithm#Algorithm">wikipedia</a>
+    </div>
 </body>
     <script>
-        // alert("hello! This visualisation is based on the behaviour of firefly. This algorithm also known as an optimisation algorithm, So the idea is fireflies are asexual and gets attracted by other flies which is more brighter than itself, but the point is brightness aka intensity changes with distance so it gets attracted to most bright according to itself. More information on https://en.wikipedia.org/wiki/Firefly_algorithm#Algorithm . That's it . Enjoy by changing the values.");
+        function hideInfo(){
+            document.querySelector('.info').style.transform = 'scaleX(0)';
+        }
     </script>
     <script src="utils.js"></script>
     <script src="setup.js"></script>
     <script src="fly.js"></script>
     <script src="run.js"></script>
 </html>
+
