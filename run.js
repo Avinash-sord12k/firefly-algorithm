@@ -12,6 +12,13 @@ var loop = function () {
 
     for (i in flies) {
 
+        // console.log(flies[i].pos);
+
+        // if (flies[i].pos.sub(flies.love.pos).mod > max_love_distance) {
+        //     flies[i].love = undefined;
+        //     flies[i].attraction = 0;
+        // }
+
         if (mousePos.sub(flies[i].pos).mod < flies[i].size + 30) {
             flies[i].drawDetailBox();
         }
@@ -21,6 +28,7 @@ var loop = function () {
                 if (i != j) {
                     // distance with other flies
                     let distance = flies[j].pos.sub(flies[i].pos).mod;
+                    if (distance > max_love_distance) { continue; }
                     // if the other fly is dimmer than the current target fly
                     if (flies[j].glow > flies[i].glow) {
                         let intensity = flies[j].glow / (1 + medium_opacity * distance ** 2);

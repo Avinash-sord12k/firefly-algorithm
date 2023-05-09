@@ -22,6 +22,7 @@ wall_collision = false;
 fly_fly_collision = false;  // not working
 attraction_exists = true;
 love_line_color = "#fce303";
+max_love_distance = 300;
 population = 10;
 dev_mode = false;
 var mousePos = new Vector(0, 0);

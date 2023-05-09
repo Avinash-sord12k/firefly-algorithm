@@ -71,8 +71,12 @@ div.info {
     transition: all 0.3s ease-in-out;
 }
 .info .controls button:hover {
-    color: #cb0909;
+    color: #cc7518;
     transform: scale(1.2);
+}
+
+#hide {
+    font-size: 1.4rem;
 }
 
 @media screen and (max-width: 768px) {
